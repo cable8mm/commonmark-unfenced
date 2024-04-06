@@ -1,5 +1,5 @@
 {
-    "name": "laravel/unfenced",
+    "name": "cable8mm/commonmark-unfenced",
     "type": "library",
     "license": "MIT",
     "autoload": {
