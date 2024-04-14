@@ -43,45 +43,50 @@ echo $converter->convert('...');
 
 Features are enabled via the "info" string of the code fence.
 
-> **Note** This extension does not include any CSS.
+> [!NOTE]
+> This extension does not include any CSS.
 
 ### Adding file names
 
 To display a file name above your code, add the `filename` attribute:
 
-    ```php filename=src/Hello.php
-    // ...
-    ```
+````markdown
+```php filename=src/Hello.php
+// ...
+```
+````
 
-![image](https://user-images.githubusercontent.com/4977161/181671748-5dee27a6-2ab5-44a1-b787-67dad273ad99.png)
+![image](https://cabinet.palgle.com/commonmark-unfenced/unfenced_filename.png)
 
 ### Adding tabs
 
 Adjacent code fences can be grouped into a tabbed view by specifying the `tab` attribute:
 
-    ```vue tab=Vue
-    // ...
-    ```
+````markdown
+```vue tab=Vue
+// ...
+```
 
-    ```javascript tab=React
-    // ...
-    ```
+```javascript tab=React
+// ...
+```
+````
 
-![image](https://user-images.githubusercontent.com/4977161/181767792-799c765e-1a9e-4e22-83f9-ee054a7e6c4d.png)
-
+![image](https://cabinet.palgle.com/commonmark-unfenced/unfenced_tab.png)
 
 You may also include the `filename` attribute, which is especially helpful when providing code samples where the file name differs depending on the language:
 
-    ```vue tab=Vue filename=Welcome.vue
-    // ...
-    ```
+````markdown
+```vue tab=Vue filename=Welcome.vue
+// ...
+```
 
-    ```javascript tab=React filename=Welcome.jsx
-    // ...
-    ```
+```javascript tab=React filename=Welcome.jsx
+// ...
+```
+````
 
-![image](https://user-images.githubusercontent.com/4977161/181767965-2103194b-96da-4733-acca-6a85d424dd22.png)
-
+![image](https://cabinet.palgle.com/commonmark-unfenced/unfenced_filename_tab.png)
 
 The extension will inject JavaScript into your page when tabs are used. The JavaScript enables the following features:
 
