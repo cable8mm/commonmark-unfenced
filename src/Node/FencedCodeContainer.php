@@ -12,6 +12,8 @@ class FencedCodeContainer extends AbstractBlock
 
     public function __construct(FencedCode $fencedCode)
     {
+        parent::__construct();
+
         $this->attributes = $this->parseAttributes($fencedCode);
 
         $this->appendChild($fencedCode);

@@ -13,6 +13,8 @@ class TabbedCode extends AbstractBlock
      */
     public function __construct(array $children)
     {
+        parent::__construct();
+
         $this->group = $this->generateTabHash($children);
 
         $this->replaceChildren($children);
