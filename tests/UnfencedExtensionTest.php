@@ -67,6 +67,22 @@ class UnfencedExtensionTest extends TestCase
         $this->assertSame($expected, $result);
     }
 
+    public function test_with_adjacent_js_and_ts_tabs()
+    {
+        $result = $this->convert(
+            file_get_contents('tests/fixtures/with-adjacent-js-ts-tabs.md'),
+            [
+                'unfenced' => [
+                    'script' => false,
+                ],
+            ]
+        );
+
+        $expected = file_get_contents('tests/fixtures/with-adjacent-js-ts-tabs.html');
+
+        $this->assertSame($expected, $result);
+    }
+
     public function test_with_tab_script()
     {
         $result = $this->convert(file_get_contents('tests/fixtures/with-tabs.md'));
